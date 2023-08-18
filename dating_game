@@ -1,18 +1,32 @@
 print("Hello world")
 import random
 
-names = ["marian", "anne", "heart", "jessy", "angel"]
-pick = " "
-print(f"{names} \n")
+female = ["marian", "anne", "heart", "jessy", "angel", "bea", "lucy"]
+male = ["dong", "erwan", "chiz", "luis", "dom", "goma"]
+pick, pick1, name,salutation = " ", " ", " ", " "
+
+name = input('Enter your name: ', )
+select1 = input('Enter your gender m/f: ', ).lower()
+if select1 == 'm':
+    salutation = 'Mr.'
+    pick1 = female.copy()
+elif select1 == 'f':
+    salutation = 'Ms.'
+    pick1 = male.copy()
+else:
+    print('invalid entry')
+
+print(f"{pick1} \n")
+
 while True:
-    select = random.choice(names)
+    select = random.choice(pick1)
     pick = input(f"enter a dating match: ")
     print(f"computer pick: {select} \n")
 
     if pick == select:
-        print(f"you find your dream date >>> ms. {select} ")
+        print(f"you find your dream date >>> {salutation} {name} ")
         break
     else:
         print("search for matching date")
 
-print(f"enjoy and lot's of fun >>> melvin and {select}")
+print(f"enjoy and lot's of fun >>> {name} and {select}")
