@@ -1,0 +1,18 @@
+print("Hello world")
+import random
+
+names = ["marian", "anne", "heart", "jessy", "angel"]
+pick = " "
+print(f"{names} \n")
+while True:
+    select = random.choice(names)
+    pick = input(f"enter a dating match: ")
+    print(f"computer pick: {select} \n")
+
+    if pick == select:
+        print(f"you find your dream date >>> ms. {select} ")
+        break
+    else:
+        print("search for matching date")
+
+print(f"enjoy and lot's of fun >>> melvin and {select}")
